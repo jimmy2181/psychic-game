@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Psychic Game</title>
+</head>
+<body>
+    <h1>Psychic Game</h1>
+    <hr>
+    <h2>Are you psychic?</h2>
+    <p>Find out if you are a real psychic, we are thinking of a random letter. See if you know which letter we are thinking of by typing your guess.</p> 
+    <script type="text/javascript">
+    var userGuess = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+    var computerChoices = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    document.onkeyup = function(event) {
+      var userGuess = event.key;
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+      alert("User guess: " + userGuess);
+      alert("Computer guess: " + computerGuess);
+      
+    if (userGuess == computerGuess){
+    alert("Send lotto picks please");}
+    else alert ("refresh to try again")}
+    </script>
+</body>
+</html>
